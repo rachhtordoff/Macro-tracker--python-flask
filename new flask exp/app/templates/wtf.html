@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block content %}
+
+
+  <form method="POST">
+    {{ form.weight.label }} {{ form.weight(id='my-text-field') }}
+	{{ form.submit() }}
+  </form>
+
+{% endblock %}

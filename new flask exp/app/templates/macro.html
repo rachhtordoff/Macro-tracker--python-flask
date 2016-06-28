@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block content %}
+
+ {% if session['counter'] %}
+            Your calories are <strong>{{session['counter']}}</strong>.<br/>
+            {% else %}
+            You still didn't set your name, do it here</a>.<br/>
+            {% endif %}
+
+			  <strong><a href="{{ url_for('clearsession') }}">Start again</a></strong> 
+
+<p>Please chose a daily macro ratio</p>
+
+  <form method="POST" action="macro">
+    {{ form.ratio.label }} {{ form.ratio }}</br>
+	{{ form.submit }}</br>
+  </form>
+  
+  
+  
+{% endblock %}

@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% block content %}
+
+
+<h1>Your calories for {{ info }}</h1>
+	<h2>
+	{% if message_error != "" %}
+	<p>{{ message_error }}</p>
+	{% else %}
+	<p>{{ goals }} calories </p>	
+	{% endif %}
+</h2>
+
+<h3>
+Next let's calculate your Macronutrient breakdowns
+
+   {% if session['counter'] %}
+            Your calories are <strong>{{session['counter']}}</strong>.<br/>
+            {% else %}
+            You still didn't set your name, do it here</a>.<br/>
+            {% endif %}
+			
+			   <strong><a href="{{ url_for('clearsession') }}">Start again</a></strong> 
+		
+</h3>
+<form action="macro">
+    <button type="submit">Next</button>
+</form>
+
+
+    
+{% endblock %}

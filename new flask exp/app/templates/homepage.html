@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+
+{% block content %}
+ <h1>
+	{% if output == -1 %}
+	<p>Please enter your stats</p>
+	{% endif %}
+	</h1>
+  <form method="POST" action="homepage">
+    {{ form.weight.label }} {{ form.weight }}</br>
+	{{ form.height.label }} {{ form.height }}</br>
+	{{ form.age.label }} {{ form.age }}</br>
+	{{ form.gender.label }} {{ form.gender }}</br>
+	{{ form.activity.label }} {{ form.activity }} </br>
+	{{ form.goal.label }} {{ form.goal }}</br>
+	{{ form.submit }}</br>
+  </form>
+
+
+
+
+{% endblock %}

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en-gb">
+  <head>
+    <!-- Bootstrap import -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+	<link rel="stylesheet" src="/static/stylesheet.css">
+    <!-- Other JS imports -->
+    <script type='text/javascript' src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script type='text/javascript' src="//netdna.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+</head>
+	<body>
+    {% include "header.html" %}
+    
+    <hr>
+    <div class="container">
+	{% block content %}
+	
+	
+	{% endblock %}
+	</div>
+  </body>
+</html>

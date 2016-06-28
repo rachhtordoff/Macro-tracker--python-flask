@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% block content %}
+
+  
+	<h2>
+	
+	<table>
+
+    <tr>
+	          <th id="tags">Fat</th>
+          <th id="method">Protein</th>
+          <th id="attachments">Carbs</th>
+        </tr>
+	<tr>
+
+        <td>{{ ratio_fat | round|int }}</td>
+		 <td>{{ ratio_protein | round|int }}</td>
+		  <td>{{ ratio_carb | round|int }}</td>
+    </tr>
+
+</table>
+
+
+</h2>
+
+  
+{% endblock %}
